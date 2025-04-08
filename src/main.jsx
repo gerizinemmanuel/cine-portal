@@ -6,6 +6,7 @@ import "./styles.css";
 
 import App from "./App.jsx";
 import HomePage from "./pages/HomePage.jsx";
+//import Teste from "./pages/Teste.jsx";
 import InitPage from "./pages/InitPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
 
@@ -17,7 +18,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />,
-        children: [{ path: "/", element: <InitPage /> }],
+        children: [
+          { path: "/", element: <InitPage /> },
+          //{ path: "/teste", element: <Teste /> },
+        ],
       },
       {
         path: "/contact",

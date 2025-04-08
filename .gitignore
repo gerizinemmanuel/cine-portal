@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Ficheiro .env
+.env
+
+# Ficheiros de teste
+Teste.jsx

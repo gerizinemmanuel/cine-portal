@@ -22,8 +22,11 @@ const HomePage = () => {
         </button>
       </div>
       <div id="content" className="flex gap-5 mt-10">
-        <div id="sidebar" className="min-h-100 w-1/4 bg-slate-800"></div>
-        <main className="min-h-100 w-3/4 grid grid-cols-2 gap-5 border-1 border-solid border-amber-700">
+        <div
+          id="sidebar"
+          className="max-h-100 w-1/4 bg-slate-800 rounded-[5px]"
+        ></div>
+        <main className="min-h-100 w-3/4 grid grid-cols-3 gap-[2%] ">
           <Outlet />
         </main>
       </div>
