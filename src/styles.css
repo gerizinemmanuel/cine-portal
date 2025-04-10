@@ -7,7 +7,7 @@
   text-decoration: none;
 }
 #root {
-  background-color: var(--color-gray-900);
+  background-color: var(--color-gray-950);
   color: var(--color-gray-300);
   min-height: 100vh;
   display: flex;
@@ -16,9 +16,6 @@
 h1 {
   font-size: 2rem;
   letter-spacing: 0.2rem;
-}
-h2 {
-  font-size: 1.5rem;
 }
 h3 {
   font-size: 1.4rem;
