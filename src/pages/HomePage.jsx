@@ -1,7 +1,5 @@
-import Input from "../components/Input";
+import SearchInput from "../components/SearchInput";
 import { Outlet } from "react-router-dom";
-
-import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 
 const HomePage = () => {
   return (
@@ -11,15 +9,7 @@ const HomePage = () => {
           Descobre as principais novidades de filmes, séries e animes aqui
           <span>.</span>
         </h2>
-        <div className="box-search flex items-center w-120 h-12 mt-5 mx-auto relative">
-          <Input
-            placeholder={"Pesquisa um filme, uma série ou um anime"}
-            className="bg-gray-300 text-gray-950 w-full h-full rounded-3xl pl-6 pr-17"
-          />
-          <button className="h-10 w-15 rounded-3xl bg-gray-400 text-gray-600 absolute right-1 hover:bg-gray-600 hover:text-gray-400">
-            <MagnifyingGlassIcon className="size-6 mx-auto" />
-          </button>
-        </div>
+        <SearchInput />
       </div>
 
       <div id="content" className="flex gap-5">

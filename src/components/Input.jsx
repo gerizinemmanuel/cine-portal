@@ -4,6 +4,7 @@ const Input = (props) => {
       type="text"
       className={props.className}
       placeholder={props.placeholder}
+      onChange={props.onChange}
     />
   );
 };

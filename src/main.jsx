@@ -6,10 +6,9 @@ import "./styles.css";
 
 import App from "./App.jsx";
 import HomePage from "./pages/HomePage.jsx";
-//import Teste from "./pages/Teste.jsx";
+import Teste from "./pages/Teste.jsx";
 import InitPage from "./pages/InitPage.jsx";
-import ContactPage from "./pages/ContactPage.jsx";
-
+import SearchResults from "./pages/SearchResults.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,12 +19,9 @@ const router = createBrowserRouter([
         element: <HomePage />,
         children: [
           { path: "/", element: <InitPage /> },
+          { path: "/search", element: <SearchResults /> },
           //{ path: "/teste", element: <Teste /> },
         ],
-      },
-      {
-        path: "/contact",
-        element: <ContactPage />,
       },
     ],
   },
