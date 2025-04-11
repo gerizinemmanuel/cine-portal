@@ -38,20 +38,7 @@ const InitPage = () => {
     <>
       <h2 className="text-[2rem] font-[700]">Filmes e séries populares</h2>
       {movies.map((movie) => {
-        let posterPath = "";
-        const imgOptions = {
-          method: "GET",
-          url: `https://api.themoviedb.org/3/movie/${movie.id}/images`,
-          headers: {
-            accept: "application/json",
-            Authorization:
-              "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlNDQ1YWE3Y2RmNDUwOWEwYTZmOGFkOGM5MzI0OGU3YiIsIm5iZiI6MTc0NDEwNTI3MS43OTUsInN1YiI6IjY3ZjRlZjM3N2I0M2JkY2UyMGFkNzhmMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Xagzj_3zSaW3kPFmOTb3lCTj9LE932yYEJ7PIsGY73Q",
-          },
-        };
-        axios.request(imgOptions).then((response) => {
-          posterPath = response.data;
-          console.log(posterPath);
-        });
+        const img_url = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
         return (
           <div
             key={movie.id}
@@ -62,7 +49,7 @@ const InitPage = () => {
             <h4>{movie.vote_average}</h4>
             <p className="line-clamp-3">{movie.overview}</p>
             <div className={`text-center`}>
-              <img className="w-full" src={posterPath} alt="" />
+              <img className="w-full" src={img_url} alt="" />
             </div>
             <Link to="#" className="text-xs">
               Género
