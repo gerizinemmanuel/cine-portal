@@ -1,8 +1,8 @@
 const Header = () => {
   return (
-    <header className="h-30 bg-slate-800 flex justify-center items-center gap-30 mb-10">
+    <header className="h-30 bg-slate-800 flex justify-center items-center gap-30">
       <div className="box-logo">
-        <h1 className="">
+        <h1 className="logo">
           Cine <span>Portal</span>
         </h1>
       </div>
