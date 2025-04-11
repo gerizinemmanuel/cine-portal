@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Header = () => {
   return (
     <header className="h-30 bg-slate-900 flex justify-center items-center gap-30">
@@ -10,13 +12,13 @@ const Header = () => {
       <div className="box-menu">
         <nav className="flex gap-5">
           <li>
-            <a href="#">Filmes</a>
+            <Link to="/">Início</Link>
           </li>
           <li>
-            <a href="#">Séries</a>
+            <Link to="/">Filmes</Link>
           </li>
           <li>
-            <a href="#">Animes</a>
+            <Link to="/">Séries</Link>
           </li>
         </nav>
       </div>

@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
-import SearchResults from "../pages/SearchResults";
 
 const SearchInput = () => {
   const [inputValue, setInputValue] = useState("");

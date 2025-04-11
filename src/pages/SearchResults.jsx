@@ -9,6 +9,7 @@ const SearchResults = () => {
 
   const options = {
     method: "GET",
+    params: { language: "pt-BR" },
     url: `https://api.themoviedb.org/3/search/movie?query=${query}`,
     headers: {
       accept: "application/json",

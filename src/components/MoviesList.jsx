@@ -21,7 +21,7 @@ const MoviesList = ({ options }) => {
         console.error(error);
         setLoading(false);
       });
-  }, []);
+  }, [options]);
 
   if (loading) {
     return <>A carregar...</>;
