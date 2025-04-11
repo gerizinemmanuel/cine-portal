@@ -13,11 +13,11 @@ const HomePage = () => {
       </div>
 
       <div id="content" className="flex gap-5">
-        <div
+        {/* <div
           id="sidebar"
           className="max-h-100 w-[30%] bg-slate-800 rounded-[5px]"
-        ></div>
-        <main className="min-h-100 max-h-fit w-[70%] rounded-[5px] grid grid-cols-3 gap-5">
+        ></div> */}
+        <main className="min-h-100 max-h-fit rounded-[5px] grid grid-cols-4 gap-5">
           <Outlet />
         </main>
       </div>

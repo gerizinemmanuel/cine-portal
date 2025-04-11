@@ -6,7 +6,7 @@ import "./styles.css";
 
 import App from "./App.jsx";
 import HomePage from "./pages/HomePage.jsx";
-import Teste from "./pages/Teste.jsx";
+//import Teste from "./pages/Teste.jsx";
 import InitPage from "./pages/InitPage.jsx";
 import SearchResults from "./pages/SearchResults.jsx";
 const router = createBrowserRouter([

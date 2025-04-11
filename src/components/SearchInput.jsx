@@ -11,7 +11,7 @@ const SearchInput = () => {
 
   function handleSearch() {
     if (inputValue.trim()) {
-      navigate(`search?query=${encodeURIComponent(inputValue)}`);
+      navigate(`/search?query=${encodeURIComponent(inputValue)}`);
     }
   }
 
@@ -29,7 +29,6 @@ const SearchInput = () => {
           className="h-10 w-15 rounded-3xl bg-gray-400 text-gray-600 absolute right-1 hover:bg-gray-600 hover:text-gray-400"
           onClick={() => {
             handleSearch();
-            //return <SearchResults userSearch={inputValue} />;
           }}
         >
           <MagnifyingGlassIcon className="size-6 mx-auto" />
