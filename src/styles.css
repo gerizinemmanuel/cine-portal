@@ -31,3 +31,28 @@ p {
 button {
   cursor: pointer;
 }
+
+/* ========================================
+              RESPONSIVIDADE 
+======================================== */
+@media screen and (width<=1080px) {
+  /* main {
+    grid-template-columns: 1fr 1fr;
+  } */
+  div#content {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  div#content > * {
+    width: 100%;
+  }
+}
+@media screen and (width<=800px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  .box-menu nav {
+    flex-flow: column wrap;
+    display: none;
+  }
+}

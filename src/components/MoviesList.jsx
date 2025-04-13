@@ -33,7 +33,7 @@ const MoviesList = ({ options }) => {
         return (
           <div
             key={movie.id}
-            className="movie-card w-full max-h-fit rounded-[5px]"
+            className="movie-card max-w-70 max-h-fit rounded-[5px]"
           >
             <div className={`card-img text-center`}>
               <img className="w-full rounded-[5px]" src={img_url} alt="" />
