@@ -48,11 +48,19 @@ button {
   }
 }
 @media screen and (width<=800px) {
+  header {
+    justify-content: space-between;
+  }
+  .menu-desk {
+    display: none;
+  }
+  .menu-mob button {
+    display: block;
+  }
+  #btn-open-menu-mob {
+    display: block;
+  }
   main {
     grid-template-columns: 1fr;
-  }
-  .box-menu nav {
-    flex-flow: column wrap;
-    display: none;
   }
 }
