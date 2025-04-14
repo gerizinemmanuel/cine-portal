@@ -8,9 +8,9 @@ const Header = () => {
     " w-0 overflow-hidden "
   );
   const menuDeskClass = "menu-desk h-full flex items-center gap-5";
-  const menuMobClass = `menu-mob z-9999 bg-gray-600${menuMobWidthClass}transition-all duration-[0.2s] py-10 px-3 items-end flex flex-col flex-wrap gap-10 absolute right-0 top-0`;
+  const menuMobClass = `menu-mob bg-gray-600${menuMobWidthClass}h-[100vh] transition-all duration-[0.2s]  items-end flex flex-col flex-wrap gap-10 absolute z-9999 right-0 top-0`;
   return (
-    <header className="bg-slate-900 h-16 py-0 px-10 flex flex-wrap justify-center gap-[20%] relative">
+    <header className="bg-gray-900 h-16 py-0 px-10 flex flex-wrap justify-center gap-[20%] relative">
       <div className="box-logo flex items-center">
         <h1 className="logo">
           Cine <span>Portal</span>
@@ -19,7 +19,7 @@ const Header = () => {
       <button
         id="btn-open-menu-mob"
         className="hidden"
-        onClick={() => setMenuMobWidthClass(" w-[90%] ")}
+        onClick={() => setMenuMobWidthClass(" w-[90%] py-10 px-3 ")}
       >
         <Bars3Icon className="size-8" />
       </button>
