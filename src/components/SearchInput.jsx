@@ -23,6 +23,9 @@ const SearchInput = () => {
           onChange={(event) => {
             setInputValue(event.target.value);
           }}
+          onKeyDown={(event) => {
+            if (event.key == "Enter") handleSearch();
+          }}
         />
         <button
           className="h-10 w-15 rounded-3xl bg-gray-400 text-gray-600 absolute right-1 hover:bg-gray-600 hover:text-gray-400"

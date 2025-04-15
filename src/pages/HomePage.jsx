@@ -15,9 +15,9 @@ const HomePage = () => {
       <div id="content" className="flex gap-5">
         <div
           id="sidebar"
-          className="max-h-100 min-h-20 w-[30%] bg-slate-900 rounded-[5px]"
+          className="max-h-100 min-h-20 w-[25%] bg-gray-900 rounded-[5px]"
         ></div>
-        <main className="min-h-100 max-h-fit w-[70%] rounded-[5px] flex flex-wrap justify-center gap-x-5 gap-y-7">
+        <main className="min-h-100 max-h-fit w-[75%] rounded-[5px] flex flex-wrap justify-center gap-x-[2em] gap-y-[2em]">
           <Outlet />
         </main>
       </div>

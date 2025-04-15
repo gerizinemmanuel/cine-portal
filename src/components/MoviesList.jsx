@@ -46,7 +46,7 @@ const MoviesList = ({ options }) => {
             <Link to="#" className="text-xs">
               Género
             </Link>
-            <Link to="#" className="block text-xs">
+            <Link to={`/details?movieID=${movie.id}`} className="block text-xs">
               Ver detalhes
             </Link>
           </div>

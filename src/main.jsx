@@ -9,6 +9,8 @@ import HomePage from "./pages/HomePage.jsx";
 //import Teste from "./pages/Teste.jsx";
 import InitPage from "./pages/InitPage.jsx";
 import SearchResults from "./pages/SearchResults.jsx";
+import Details from "./pages/Details.jsx";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,6 +24,10 @@ const router = createBrowserRouter([
           { path: "/search", element: <SearchResults /> },
           //{ path: "/teste", element: <Teste /> },
         ],
+      },
+      {
+        path: "/details",
+        element: <Details />,
       },
     ],
   },
