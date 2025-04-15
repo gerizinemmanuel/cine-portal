@@ -38,7 +38,7 @@ const MoviesList = ({ options }) => {
             <div className={`card-img text-center`}>
               <img className="w-full rounded-[5px]" src={img_url} alt="" />
             </div>
-            <h3>{movie.title ? movie.title : movie.name}</h3>
+            <h3>{movie.title || movie.name}</h3>
             <h4>{movie.release_date}</h4>
             <h4>{movie.vote_average}</h4>
             {/* {<p className="line-clamp-3">{movie.overview}</p>} */}
@@ -46,7 +46,10 @@ const MoviesList = ({ options }) => {
             <Link to="#" className="text-xs">
               Género
             </Link>
-            <Link to={`/details?movieID=${movie.id}`} className="block text-xs">
+            <Link
+              to={`/details?movieID=${movie.id}&mediaType=${movie.media_type}`}
+              className="block text-xs"
+            >
               Ver detalhes
             </Link>
           </div>

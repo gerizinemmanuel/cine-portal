@@ -9,7 +9,11 @@ const InitPage = () => {
       accept: "application/json",
     },
   };
-  return <MoviesList options={options} />;
+  return (
+    <>
+      <MoviesList options={options} />
+    </>
+  );
 };
 
 export default InitPage;

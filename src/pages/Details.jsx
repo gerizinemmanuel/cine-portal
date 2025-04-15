@@ -11,9 +11,10 @@ const Details = () => {
   const location = useLocation();
   const params = new URLSearchParams(location.search);
   const movieID = params.get("movieID");
+  const mediaType = params.get("mediaType");
   const options = {
     method: "GET",
-    url: `https://api.themoviedb.org/3/movie/${movieID}`,
+    url: `https://api.themoviedb.org/3/${mediaType}/${movieID}`,
     params: { language: "pt-PT" },
     headers: {
       accept: "application/json",
@@ -35,10 +36,26 @@ const Details = () => {
     <>
       <div className="flex justify-center gap-[2%] py-10">
         <div className="text max-w-100 flex flex-col gap-5">
-          <h2 className="text-[3.5rem] font-bold">{movieDetails.title}</h2>
-          <h4>Data de lançamento: {movieDetails.release_date}</h4>
+          <h2 className="text-[3.5rem] font-bold">
+            {movieDetails.title || movieDetails.name}
+          </h2>
+          {movieDetails.release_date && (
+            <h4>Data de lançamento: {movieDetails.release_date}</h4>
+          )}
+          {movieDetails.first_air_date && (
+            <h4>Primeira exibição: {movieDetails.first_air_date}</h4>
+          )}
+          {movieDetails.last_air_date && (
+            <h4>Última exibição: {movieDetails.last_air_date}</h4>
+          )}
           <h3>Sinopse</h3>
           <p className="text-justify">{movieDetails.overview}</p>
+          {movieDetails.number_of_seasons && (
+            <p>Número de temporadas: {movieDetails.number_of_seasons}</p>
+          )}
+          {movieDetails.number_of_episodes && (
+            <p>Número de episódios: {movieDetails.number_of_episodes}</p>
+          )}
           <p>
             Géneros:{" "}
             {genresList &&

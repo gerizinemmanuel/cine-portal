@@ -10,6 +10,7 @@ import HomePage from "./pages/HomePage.jsx";
 import InitPage from "./pages/InitPage.jsx";
 import SearchResults from "./pages/SearchResults.jsx";
 import Details from "./pages/Details.jsx";
+import TrendingMedia from "./pages/TrendingMedia.jsx";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
         children: [
           { path: "/", element: <InitPage /> },
           { path: "/search", element: <SearchResults /> },
+          { path: "/trending", element: <TrendingMedia /> },
           //{ path: "/teste", element: <Teste /> },
         ],
       },

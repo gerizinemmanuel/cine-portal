@@ -64,3 +64,8 @@ button {
     grid-template-columns: 1fr;
   }
 }
+@media screen and (width<=815px) {
+  div.movie-card {
+    width: 90%;
+  }
+}

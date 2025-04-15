@@ -31,10 +31,10 @@ const Header = () => {
           <Link to="/">Início</Link>
         </li>
         <li>
-          <Link to="/">Filmes</Link>
+          <Link to="/trending?mediaType=movie">Filmes</Link>
         </li>
         <li>
-          <Link to="/">Séries</Link>
+          <Link to="/trending?mediaType=tv">Séries</Link>
         </li>
       </nav>
       {/*Menu Desktop */}
