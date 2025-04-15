@@ -51,7 +51,7 @@ button {
   header {
     justify-content: space-between;
   }
-  .menu-desk {
+  /* .menu-desk {
     display: none;
   }
   .menu-mob button {
@@ -59,7 +59,7 @@ button {
   }
   #btn-open-menu-mob {
     display: block;
-  }
+  } */
   main {
     grid-template-columns: 1fr;
   }
