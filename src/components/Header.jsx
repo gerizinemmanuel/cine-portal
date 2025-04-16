@@ -16,7 +16,7 @@ const Header = () => {
   const isMobile = useMediaQuery({ maxWidth: 815 });
 
   return (
-    <header className="bg-gray-900 h-25 py-0 px-10 flex flex-wrap justify-center gap-[20%] relative">
+    <header className="bg-gray-900 h-25 py-0 px-[10%] flex flex-wrap gap-[10%] relative">
       <div className="box-logo flex items-center">
         <Link to="/">
           <h1 className="logo">
@@ -29,6 +29,7 @@ const Header = () => {
           <Bars3Icon className="size-8" />
         </button>
       )}
+
       {menuOpen && (
         <div
           className="darken fixed z-8888 left-0 top-0 w-[100vw] h-[100vh] bg-[#5c5c5c80]"
@@ -37,6 +38,7 @@ const Header = () => {
           }}
         ></div>
       )}
+
       <nav className={isMobile ? menuMobClass : menuDeskClass}>
         {isMobile && (
           <button
@@ -47,35 +49,25 @@ const Header = () => {
           </button>
         )}
         <li>
-          <Link to="/">Início</Link>
+          <Link to="/" onClick={() => setMenuOpen(false)}>
+            Início
+          </Link>
         </li>
         <li>
-          <Link to="/trending?mediaType=movie">Filmes</Link>
+          <Link
+            to="/trending?mediaType=movie"
+            onClick={() => setMenuOpen(false)}
+          >
+            Filmes
+          </Link>
         </li>
         <li>
-          <Link to="/trending?mediaType=tv">Séries</Link>
+          <Link to="/trending?mediaType=tv" onClick={() => setMenuOpen(false)}>
+            Séries
+          </Link>
         </li>
       </nav>
       {/*Menu Desktop */}
-
-      {/* <nav className={menuMobClass}>
-        <button
-          className="absolute left-1 top-1"
-          onClick={() => setMenuMobWidthClass(" w-0 overflow-hidden ")}
-        >
-          <XMarkIcon className="size-8" />
-        </button>
-        <li>
-          <Link to="/">Início</Link>
-        </li>
-        <li>
-          <Link to="/">Filmes</Link>
-        </li>
-        <li>
-          <Link to="/">Séries</Link>
-        </li>
-      </nav> */}
-      {/*Menu Mobile */}
     </header>
   );
 };

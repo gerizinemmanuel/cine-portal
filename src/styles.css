@@ -36,36 +36,36 @@ button {
               RESPONSIVIDADE 
 ======================================== */
 @media screen and (width<=1080px) {
-  /* main {
-    grid-template-columns: 1fr 1fr;
-  } */
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
+
 @media screen and (width<=815px) {
-  div#content {
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-  div#content > * {
-    width: 100%;
-  }
   header {
     justify-content: space-between;
   }
-  /* .menu-desk {
-    display: none;
-  }
-  .menu-mob button {
-    display: block;
-  }
-  #btn-open-menu-mob {
-    display: block;
-  } */
   main {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+  }
+  .top .box-search {
+    width: 90%;
+  }
+  #box-details {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  #box-details > div {
+    max-width: 100%;
   }
 }
-@media screen and (width<=815px) {
-  div.movie-card {
-    width: 90%;
+
+@media screen and (width<=470px) {
+  main {
+    grid-template-columns: 1fr;
   }
 }

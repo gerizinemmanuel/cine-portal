@@ -17,7 +17,7 @@ const HomePage = () => {
           id="sidebar"
           className="max-h-100 min-h-20 w-[25%] bg-gray-900 rounded-[5px]"
         ></div> */}
-        <main className="min-h-100 max-h-fit  rounded-[5px] flex flex-wrap justify-center gap-x-[2em] gap-y-[2em]">
+        <main className="w-[90%] mx-auto min-h-100 max-h-fit grid grid-cols-4 gap-x-[2em] gap-y-[2em]">
           <Outlet />
         </main>
       </div>

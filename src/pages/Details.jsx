@@ -34,7 +34,10 @@ const Details = () => {
 
   return (
     <>
-      <div className="flex justify-center gap-[2%] py-10">
+      <div
+        id="box-details"
+        className="flex justify-center gap-[2%] px-[5%] py-10"
+      >
         <div className="text max-w-100 flex flex-col gap-5">
           <h2 className="text-[3.5rem] font-bold">
             {movieDetails.title || movieDetails.name}

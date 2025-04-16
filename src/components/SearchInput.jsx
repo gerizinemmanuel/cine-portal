@@ -16,7 +16,7 @@ const SearchInput = () => {
 
   return (
     <>
-      <div className="box-search flex items-center max-w-120 h-12 mt-5 mx-auto relative">
+      <div className="box-search flex items-center max-w-[90%] h-12 mt-5 mx-auto relative">
         <Input
           placeholder={"Pesquisa um filme, uma série ou um anime"}
           className="bg-gray-300 text-gray-950 w-full h-full rounded-3xl pl-6 pr-17"

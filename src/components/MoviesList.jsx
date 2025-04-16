@@ -31,10 +31,7 @@ const MoviesList = ({ options }) => {
       {movies.map((movie) => {
         const img_url = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
         return (
-          <div
-            key={movie.id}
-            className="movie-card max-w-60 max-h-fit rounded-[5px]"
-          >
+          <div key={movie.id} className="movie-card rounded-[5px]">
             <div className={`card-img text-center`}>
               <img className="w-full rounded-[5px]" src={img_url} alt="" />
             </div>

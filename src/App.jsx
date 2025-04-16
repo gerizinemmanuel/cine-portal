@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Header />
-      <div className="content px-[6%] ">
+      <div className="content">
         <Outlet />
       </div>
       <Footer />
