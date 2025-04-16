@@ -5,11 +5,13 @@ import { XMarkIcon } from "@heroicons/react/24/solid";
 import { useMediaQuery } from "react-responsive";
 
 const Header = () => {
-  const [menuMobWidthClass, setMenuMobWidthClass] = useState(
-    "w-0 overflow-hidden"
-  );
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuMobWidthClass = menuOpen
+    ? "w-[90%] py-10 px-3"
+    : "w-0 overflow-hidden";
+
   const menuDeskClass = "menu-desk h-full flex items-center gap-5";
-  const menuMobClass = `menu-mob bg-gray-600 ${menuMobWidthClass} h-[100vh] transition-all duration-[0.2s]  items-end flex flex-col flex-wrap gap-10 absolute z-9999 right-0 top-0`;
+  const menuMobClass = `menu-mob bg-gray-800 ${menuMobWidthClass} h-[100vh] transition-all duration-[0.2s]  items-end flex flex-col flex-wrap gap-10 fixed z-9999 right-0 top-0`;
 
   const isMobile = useMediaQuery({ maxWidth: 815 });
 
@@ -23,19 +25,23 @@ const Header = () => {
         </Link>
       </div>
       {isMobile && (
-        <button
-          id="btn-open-menu-mob"
-          onClick={() => setMenuMobWidthClass("w-[90%] py-10 px-3")}
-        >
+        <button id="btn-open-menu-mob" onClick={() => setMenuOpen(true)}>
           <Bars3Icon className="size-8" />
         </button>
       )}
-
+      {menuOpen && (
+        <div
+          className="darken fixed z-8888 left-0 top-0 w-[100vw] h-[100vh] bg-[#5c5c5c80]"
+          onClick={() => {
+            setMenuOpen(false);
+          }}
+        ></div>
+      )}
       <nav className={isMobile ? menuMobClass : menuDeskClass}>
         {isMobile && (
           <button
             className="absolute left-1 top-1"
-            onClick={() => setMenuMobWidthClass("w-0 overflow-hidden")}
+            onClick={() => setMenuOpen(false)}
           >
             <XMarkIcon className="size-8" />
           </button>
