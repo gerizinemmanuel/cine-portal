@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import { useMediaQuery } from "react-responsive";
+import logo from "../assets/img/logo-primary.png";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,9 +20,7 @@ const Header = () => {
     <header className="bg-gray-900 h-25 py-0 px-[10%] flex flex-wrap gap-[10%] relative">
       <div className="box-logo flex items-center">
         <Link to="/">
-          <h1 className="logo">
-            Cine <span>Portal</span>
-          </h1>
+          <img src={logo} alt="Cine Portal" className="max-h-15" />
         </Link>
       </div>
       {isMobile && (
