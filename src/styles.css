@@ -13,6 +13,15 @@
   display: flex;
   flex-flow: column wrap;
 }
+#top {
+  background-image: url("assets/img/header-bg.jpg");
+  background-size: cover;
+}
+header.header-bg-2 {
+  background-image: url("assets/img/header-bg-2.jpg");
+  background-size: cover;
+  background-position-y: 50%;
+}
 h1 {
   font-size: 2rem;
   letter-spacing: 0.2rem;
@@ -39,7 +48,7 @@ button {
 }
 
 @media screen and (width<=815px) {
-  header {
+  header > div {
     justify-content: space-between;
   }
   main {

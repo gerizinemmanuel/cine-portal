@@ -1,15 +1,19 @@
 import SearchInput from "../components/SearchInput";
+import Header from "../components/Header";
 import { Outlet } from "react-router-dom";
 
 const HomePage = () => {
   return (
     <>
-      <div id="top" className="my-15">
-        <h2 className="text-white text-center text-[1.5rem]">
-          Descobre as principais novidades de filmes, séries e animes aqui
-          <span>.</span>
-        </h2>
-        <SearchInput />
+      <div id="top" className={`mb-10 relative`}>
+        <Header />
+        <div className="darken-top bg-[#030712b3] pb-15 ">
+          <h2 className="text-white text-center text-[1.8rem] font-bold">
+            Descobre as principais novidades de filmes, séries e animes aqui
+            <span>.</span>
+          </h2>
+          <SearchInput />
+        </div>
       </div>
 
       <div id="content" className="flex gap-5">

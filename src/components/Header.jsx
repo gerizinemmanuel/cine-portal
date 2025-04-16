@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import { useMediaQuery } from "react-responsive";
-import headerLogo from "../assets/img/logo-primary.png";
+import headerLogo from "../assets/img/logo-transparent.png";
 
-const Header = () => {
+const Header = (props) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuMobWidthClass = menuOpen
     ? "w-[90%] py-10 px-3"
@@ -17,56 +17,65 @@ const Header = () => {
   const isMobile = useMediaQuery({ maxWidth: 815 });
 
   return (
-    <header className="bg-gray-900 h-25 py-0 px-[5%] flex flex-wrap gap-[10%] relative">
-      <div className="box-logo flex items-center">
-        <Link to="/">
-          <img src={headerLogo} alt="Cine Portal" className="max-h-15" />
-        </Link>
-      </div>
-      {isMobile && (
-        <button id="btn-open-menu-mob" onClick={() => setMenuOpen(true)}>
-          <Bars3Icon className="size-8" />
-        </button>
-      )}
-
-      {menuOpen && (
-        <div
-          className="darken fixed z-8888 left-0 top-0 w-[100vw] h-[100vh] bg-[#5c5c5c80]"
-          onClick={() => {
-            setMenuOpen(false);
-          }}
-        ></div>
-      )}
-
-      <nav className={isMobile ? menuMobClass : menuDeskClass}>
+    <header className={`${props.className}`}>
+      <div className="darken-top bg-[#030712b3] h-25 py-0 px-[5%] flex items-center flex-wrap gap-[10%] relative">
+        <div className="box-logo flex items-center">
+          <Link to="/">
+            <img src={headerLogo} alt="Cine Portal" className="max-h-10" />
+          </Link>
+        </div>
         {isMobile && (
           <button
-            className="absolute left-1 top-1"
-            onClick={() => setMenuOpen(false)}
+            id="btn-open-menu-mob"
+            className="max-h-fit"
+            onClick={() => setMenuOpen(true)}
           >
-            <XMarkIcon className="size-8" />
+            <Bars3Icon className="size-8" />
           </button>
         )}
-        <li>
-          <Link to="/" onClick={() => setMenuOpen(false)}>
-            Início
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/trending?mediaType=movie"
-            onClick={() => setMenuOpen(false)}
-          >
-            Filmes
-          </Link>
-        </li>
-        <li>
-          <Link to="/trending?mediaType=tv" onClick={() => setMenuOpen(false)}>
-            Séries
-          </Link>
-        </li>
-      </nav>
-      {/*Menu Desktop */}
+
+        {menuOpen && (
+          <div
+            className="darken fixed z-8888 left-0 top-0 w-[100vw] h-[100vh] bg-[#5c5c5c80]"
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          ></div>
+        )}
+
+        <nav className={`${isMobile ? menuMobClass : menuDeskClass} font-bold`}>
+          {isMobile && (
+            <button
+              className="absolute left-1 top-1"
+              onClick={() => setMenuOpen(false)}
+            >
+              <XMarkIcon className="size-8" />
+            </button>
+          )}
+          <li>
+            <Link to="/" onClick={() => setMenuOpen(false)}>
+              Início
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/trending?mediaType=movie"
+              onClick={() => setMenuOpen(false)}
+            >
+              Filmes
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/trending?mediaType=tv"
+              onClick={() => setMenuOpen(false)}
+            >
+              Séries
+            </Link>
+          </li>
+        </nav>
+        {/*Menu Desktop */}
+      </div>
     </header>
   );
 };

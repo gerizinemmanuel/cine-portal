@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Header from "../components/Header";
 
 const Details = () => {
   const apiKey = import.meta.env.VITE_TMDB_API_KEY;
@@ -34,6 +35,7 @@ const Details = () => {
 
   return (
     <>
+      <Header className="header-bg-2" />
       <div
         id="box-details"
         className="flex justify-center gap-[2%] px-[5%] py-10"
